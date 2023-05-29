@@ -10,7 +10,16 @@ account_list_t init() {
     }
     account_list->account = NULL; /* initialize the account field to NULL */
     account_list->next = NULL;    /* initialize the next field to NULL */
-    return account_list;          /* return the pointer to the account list */
+
+    /* Define two accounts */
+    account_t account1 = new_account("Alice", "0", 0); /* a normal user */
+    account_t account2 = new_account("Bob", "1", 1);   /* an admin user */
+
+    /* Add them to the account list */
+    add_account(&account_list, account1);
+    add_account(&account_list, account2);
+
+    return account_list;
 }
 
 account_t new_account(char *name, char *pwd, int type) {
