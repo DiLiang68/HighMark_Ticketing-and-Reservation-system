@@ -68,33 +68,49 @@ include CMakeFiles/Extra2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Extra2.dir/flags.make
 
-CMakeFiles/Extra2.dir/main.c.obj: CMakeFiles/Extra2.dir/flags.make
-CMakeFiles/Extra2.dir/main.c.obj: G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/main.c
-CMakeFiles/Extra2.dir/main.c.obj: CMakeFiles/Extra2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Extra2.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Extra2.dir/main.c.obj -MF CMakeFiles\Extra2.dir\main.c.obj.d -o CMakeFiles\Extra2.dir\main.c.obj -c G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\main.c
+CMakeFiles/Extra2.dir/src/main.c.obj: CMakeFiles/Extra2.dir/flags.make
+CMakeFiles/Extra2.dir/src/main.c.obj: G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/main.c
+CMakeFiles/Extra2.dir/src/main.c.obj: CMakeFiles/Extra2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Extra2.dir/src/main.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Extra2.dir/src/main.c.obj -MF CMakeFiles\Extra2.dir\src\main.c.obj.d -o CMakeFiles\Extra2.dir\src\main.c.obj -c G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\main.c
 
-CMakeFiles/Extra2.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Extra2.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\main.c > CMakeFiles\Extra2.dir\main.c.i
+CMakeFiles/Extra2.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Extra2.dir/src/main.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\main.c > CMakeFiles\Extra2.dir\src\main.c.i
 
-CMakeFiles/Extra2.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Extra2.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\main.c -o CMakeFiles\Extra2.dir\main.c.s
+CMakeFiles/Extra2.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Extra2.dir/src/main.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\main.c -o CMakeFiles\Extra2.dir\src\main.c.s
+
+CMakeFiles/Extra2.dir/src/login/login.c.obj: CMakeFiles/Extra2.dir/flags.make
+CMakeFiles/Extra2.dir/src/login/login.c.obj: G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/login/login.c
+CMakeFiles/Extra2.dir/src/login/login.c.obj: CMakeFiles/Extra2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Extra2.dir/src/login/login.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Extra2.dir/src/login/login.c.obj -MF CMakeFiles\Extra2.dir\src\login\login.c.obj.d -o CMakeFiles\Extra2.dir\src\login\login.c.obj -c G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\login\login.c
+
+CMakeFiles/Extra2.dir/src/login/login.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Extra2.dir/src/login/login.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\login\login.c > CMakeFiles\Extra2.dir\src\login\login.c.i
+
+CMakeFiles/Extra2.dir/src/login/login.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Extra2.dir/src/login/login.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\login\login.c -o CMakeFiles\Extra2.dir\src\login\login.c.s
 
 # Object files for target Extra2
 Extra2_OBJECTS = \
-"CMakeFiles/Extra2.dir/main.c.obj"
+"CMakeFiles/Extra2.dir/src/main.c.obj" \
+"CMakeFiles/Extra2.dir/src/login/login.c.obj"
 
 # External object files for target Extra2
 Extra2_EXTERNAL_OBJECTS =
 
-Extra2.exe: CMakeFiles/Extra2.dir/main.c.obj
+Extra2.exe: CMakeFiles/Extra2.dir/src/main.c.obj
+Extra2.exe: CMakeFiles/Extra2.dir/src/login/login.c.obj
 Extra2.exe: CMakeFiles/Extra2.dir/build.make
 Extra2.exe: CMakeFiles/Extra2.dir/linkLibs.rsp
 Extra2.exe: CMakeFiles/Extra2.dir/objects1.rsp
 Extra2.exe: CMakeFiles/Extra2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Extra2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Extra2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Extra2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

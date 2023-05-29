@@ -3,49 +3,75 @@
 
 #pragma once
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 struct account {
     char *name;
     char *pwd;
+    int type; /* 1 if is admin, otherwise 0 */
 };
 
 typedef struct account *account_t;
 
-/**
- * @brief Initialize the account of the system.
- *
- * @return account_t The pointer to the account.
- */
-account_t init();
+struct account_list {
+    account_t account;
+    struct account_list *next;
+};
+
+typedef struct account_list *account_list_t;
 
 /**
- * @brief Create a new account with the provided name and password.
+ * @brief Initialize the account list of the system.
  *
- * @param name The name for the new account.
- * @param pwd The password for the new account.
- * @return account_t The pointer to the newly created account.
+ * @return account_list_t The pointer to the account list.
  */
-account_t new_account(char *name, char *pwd);
+account_list_t init();
 
 /**
- * @brief Check if the provided name and password match the given account.
+ * @brief Create a new account.
  *
- * @param account The account to check.
- * @param name The name to check against the account.
- * @param pwd The password to check against the account.
- * @return int Returns 1 if the name and password match the account, 0
- * otherwise.
+ * @param name The name of the account.
+ * @param pwd The password of the account.
+ * @param type The type of the account.
+ * @return account_t The new account created.
  */
-int check_account(account_t account, char *name, char *pwd);
+account_t new_account(char *name, char *pwd, int type);
 
 /**
- * @brief Free the memory of the account.
- * 
- * @param account 
+ * @brief Add an account to the account list.
+ *
+ * @param account_list A pointer to the list of accounts.
+ * @param account The account to be added.
  */
-void delete_account(account_t account);
+void add_account(account_list_t *account_list, account_t account);
+
+/**
+ * @brief Check if an account is in the account list.
+ *
+ * @param account_list The list of accounts to check.
+ * @param name The name of the account.
+ * @param pwd The password of the account.
+ * @param type The type of the account.
+ * @return int Returns 1 if the account is in the list, otherwise returns 0.
+ */
+int check_account(account_list_t account_list, char *name, char *pwd, int type);
+
+/**
+ * @brief Delete an account from the account list.
+ *
+ * @param account_list The pointer to the list of accounts.
+ * @param type The type of the account.
+ * @param name The name of the account to be deleted.
+ */
+void delete_account(account_list_t *account_list, char *name, int type);
+
+/**
+ * @brief Free the memory allocated for the account list.
+ *
+ * @param account_list The list of accounts to be freed.
+ */
+void free_account_list(account_list_t account_list);
 
 #endif

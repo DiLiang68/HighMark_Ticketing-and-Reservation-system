@@ -64,26 +64,6 @@ CMAKE_BINARY_DIR = G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	"F:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-.PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	"F:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-.PHONY : package_source/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -522,29 +502,53 @@ Extra2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/build
 .PHONY : Extra2/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+src/login/login.obj: src/login/login.c.obj
+.PHONY : src/login/login.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/main.c.obj
-.PHONY : main.c.obj
+src/login/login.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/login/login.c.obj
+.PHONY : src/login/login.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+src/login/login.i: src/login/login.c.i
+.PHONY : src/login/login.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/main.c.i
-.PHONY : main.c.i
+src/login/login.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/login/login.c.i
+.PHONY : src/login/login.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+src/login/login.s: src/login/login.c.s
+.PHONY : src/login/login.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/main.c.s
-.PHONY : main.c.s
+src/login/login.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/login/login.c.s
+.PHONY : src/login/login.c.s
+
+src/main.obj: src/main.c.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.obj
+.PHONY : src/main.c.obj
+
+src/main.i: src/main.c.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -553,8 +557,6 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
-	@echo ... package
-	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... Continuous
@@ -586,9 +588,12 @@ help:
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
 	@echo ... Extra2
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/login/login.obj
+	@echo ... src/login/login.i
+	@echo ... src/login/login.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

@@ -1,8 +1,14 @@
 [
 {
   "directory": "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\Extra2.dir\\main.c.obj -c G:\\FCP\\Extra2\\HighMark_Ticketing-and-Reservation-system\\main.c",
-  "file": "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/main.c",
-  "output": "CMakeFiles/Extra2.dir/main.c.obj"
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\Extra2.dir\\src\\main.c.obj -c G:\\FCP\\Extra2\\HighMark_Ticketing-and-Reservation-system\\src\\main.c",
+  "file": "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/main.c",
+  "output": "CMakeFiles/Extra2.dir/src/main.c.obj"
+},
+{
+  "directory": "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\Extra2.dir\\src\\login\\login.c.obj -c G:\\FCP\\Extra2\\HighMark_Ticketing-and-Reservation-system\\src\\login\\login.c",
+  "file": "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/login/login.c",
+  "output": "CMakeFiles/Extra2.dir/src/login/login.c.obj"
 }
 ]
