@@ -5,20 +5,7 @@
 #include <string.h>
 
 int main() {
-    login_menu();
+    account_list_t account_list = init();
+    int type = login_menu(account_list);
     return 0;
-}
-
-/**
- * @brief Show the login menu.
- *
- */
-void login_menu() {
-    printf("Wellcome to High-Mark Ticketing & Reservation System!\n");
-    printf("*****************************************************\n");
-    printf(" 1 - Admin\n");
-    printf(" 2 - User\n");
-    printf(" 0 - Exit\n");
-    printf("\n");
-    printf("*****************************************************\n");
 }

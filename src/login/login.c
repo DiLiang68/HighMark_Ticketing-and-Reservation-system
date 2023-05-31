@@ -15,7 +15,7 @@ account_list_t init() {
     account_t account1 = new_account("Alice", "0", 0); /* a normal user */
     account_t account2 = new_account("Bob", "1", 1);   /* an admin user */
 
-    /* Add them to the account list */
+    /* Add them to the account account_list */
     add_account(&account_list, account1);
     add_account(&account_list, account2);
 
@@ -35,18 +35,20 @@ account_t new_account(char *name, char *pwd, int type) {
     return new_account;
 }
 
-void add_account(account_list_t *account_list, account_t account) {
+int add_account(account_list_t *account_list, account_t account) {
     account_list_t new_node =
         (account_list_t)malloc(sizeof(struct account_list));
     if (new_node != NULL) {
         new_node->account = account;
         new_node->next = *account_list;
         *account_list = new_node;
+        return 1;
     }
+    return 0;
 }
 
-int check_account(account_list_t account_list, char *name, char *pwd,
-                  int type) {
+int verify_account(account_list_t account_list, char *name, char *pwd,
+                   int type) {
     account_list_t current = account_list;
     while (current != NULL) {
         if (strcmp(current->account->name, name) == 0 &&
@@ -59,7 +61,18 @@ int check_account(account_list_t account_list, char *name, char *pwd,
     return 0;
 }
 
-void delete_account(account_list_t *account_list, char *name, int type) {
+int check_account(account_list_t account_list, char *name, int type) {
+    while (account_list != NULL) {
+        if (strcmp(account_list->account->name, name) == 0 &&
+            account_list->account->type == type) {
+            return 1;
+        }
+        account_list = account_list->next;
+    }
+    return 0;
+}
+
+int delete_account(account_list_t *account_list, char *name, int type) {
     account_list_t current = *account_list;
     account_list_t previous = NULL;
     while (current != NULL) {
@@ -74,10 +87,27 @@ void delete_account(account_list_t *account_list, char *name, int type) {
             free(current->account->pwd);
             free(current->account);
             free(current);
-            return;
+            return 1;
         }
         previous = current;
         current = current->next;
+    }
+    return 0;
+}
+
+int edit_account(account_list_t account_list, char *name, int type,
+                 char *new_name, char *new_pwd, int new_type) {
+    while (account_list != NULL) {
+        if (strcmp(account_list->account->name, name) == 0 &&
+            account_list->account->type == type) {
+            strcpy(account_list->account->name, new_name);
+            strcpy(account_list->account->pwd, new_pwd);
+            account_list->account->type = new_type;
+            printf("The account with name %s has been edited successfully.\n",
+                   name);
+            return 1;
+        }
+        account_list = account_list->next;
     }
 }
 

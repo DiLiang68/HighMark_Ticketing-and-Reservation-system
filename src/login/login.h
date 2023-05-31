@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX_STRING_LENGTH 32
+
 struct account {
     char *name;
     char *pwd;
@@ -44,8 +46,10 @@ account_t new_account(char *name, char *pwd, int type);
  *
  * @param account_list A pointer to the list of accounts.
  * @param account The account to be added.
+ * 
+ * @return int 1 if the account is added successfully, 0 otherwise.
  */
-void add_account(account_list_t *account_list, account_t account);
+int add_account(account_list_t *account_list, account_t account);
 
 /**
  * @brief Check if an account is in the account list.
@@ -54,9 +58,21 @@ void add_account(account_list_t *account_list, account_t account);
  * @param name The name of the account.
  * @param pwd The password of the account.
  * @param type The type of the account.
- * @return int Returns 1 if the account is in the list, otherwise returns 0.
+ * 
+ * @return int 1 if the account is in the list, 0 otherwise.
  */
-int check_account(account_list_t account_list, char *name, char *pwd, int type);
+int verify_account(account_list_t account_list, char *name, char *pwd,
+                   int type);
+
+/**
+ * @brief Check if an account exists in the account list.
+ *
+ * @param list The pointer to the account list.
+ * @param name The name of the account to be checked.
+ * 
+ * @return int 1 if the account exists, 0 otherwise.
+ */
+int check_account(account_list_t account_list, char *name, int type);
 
 /**
  * @brief Delete an account from the account list.
@@ -65,7 +81,21 @@ int check_account(account_list_t account_list, char *name, char *pwd, int type);
  * @param type The type of the account.
  * @param name The name of the account to be deleted.
  */
-void delete_account(account_list_t *account_list, char *name, int type);
+int delete_account(account_list_t *account_list, char *name, int type);
+
+/**
+ * @brief Edit an existing account in the account list.
+ *
+ * @param list The pointer to the account list.
+ * @param name The name of the account to be edited.
+ * @param type The type of the account to be edited.
+ * @param new_name The new name of the account.
+ * @param new_pwd The new password of the account.
+ * @param new_type The new type of the account.
+ * @return int 1 if the account is edited successfully, 0 otherwise.
+ */
+int edit_account(account_list_t account_list, char *name, int type,
+                 char *new_name, char *new_pwd, int new_type);
 
 /**
  * @brief Free the memory allocated for the account list.
