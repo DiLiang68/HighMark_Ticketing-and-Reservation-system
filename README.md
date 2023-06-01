@@ -29,6 +29,18 @@ After downloading the source code, use the `make` command for compilation, and t
 
 The system uses a linked list data structure to store appointment information and implements functionalities for creating, querying, and deleting appointments.
 
+### Architecture Design
+
+![Architecture Design](resources/images/Archi.jpg "Architecture Design")
+
+### Context Diagram
+
+![Context Diagram](resources/images/Context_Diagram.jpg "Context Diagram")
+
+## Testing and Validation
+
+The system has been thoroughly tested by writing and running test cases.
+
 | Test ID | Description                                             | Expected Input            | Expected Output                     | Actual Output                       | PASS/FAIL |
 | ------- | ------------------------------------------------------- | ------------------------- | ----------------------------------- | ----------------------------------- | --------- |
 | T_01    | Provide correct information for login                   | username, password, type  | `Successfully logged in!`           | `Successfully logged in!`           | Pass      |
@@ -45,10 +57,6 @@ The system uses a linked list data structure to store appointment information an
 | T_10    | Edit an existing account                                | account ID, new details   | `Account updated successfully`      | `Account updated successfully`      | Pass      |
 | T_10_01 | Provide incorrect information when editing account      | account ID, new details   | `The account does not exist!`       | `The account does not exist!`       | Pass      |
 | T_11    | Delete an existing account                              | account ID                | `Account deleted successfully`      | `Account deleted successfully`      | Pass      |
-
-## Testing and Validation
-
-The system has been thoroughly tested by writing and running test cases.
 
 ## Project Summary and Reflection
 
