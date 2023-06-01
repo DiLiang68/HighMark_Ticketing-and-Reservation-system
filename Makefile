@@ -502,6 +502,30 @@ Extra2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/build
 .PHONY : Extra2/fast
 
+src/appointment/appointment.obj: src/appointment/appointment.c.obj
+.PHONY : src/appointment/appointment.obj
+
+# target to build an object file
+src/appointment/appointment.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.obj
+.PHONY : src/appointment/appointment.c.obj
+
+src/appointment/appointment.i: src/appointment/appointment.c.i
+.PHONY : src/appointment/appointment.i
+
+# target to preprocess a source file
+src/appointment/appointment.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.i
+.PHONY : src/appointment/appointment.c.i
+
+src/appointment/appointment.s: src/appointment/appointment.c.s
+.PHONY : src/appointment/appointment.s
+
+# target to generate assembly for a file
+src/appointment/appointment.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.s
+.PHONY : src/appointment/appointment.c.s
+
 src/login/login.obj: src/login/login.c.obj
 .PHONY : src/login/login.obj
 
@@ -612,6 +636,9 @@ help:
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
 	@echo ... Extra2
+	@echo ... src/appointment/appointment.obj
+	@echo ... src/appointment/appointment.i
+	@echo ... src/appointment/appointment.s
 	@echo ... src/login/login.obj
 	@echo ... src/login/login.i
 	@echo ... src/login/login.s

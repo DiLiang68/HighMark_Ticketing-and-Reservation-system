@@ -13,7 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_compile_options"
 		],
 		"files" : 
 		[
@@ -29,6 +30,12 @@
 				"file" : 0,
 				"line" : 12,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
 			}
 		]
 	},
@@ -39,6 +46,18 @@
 			[
 				{
 					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-ansi"
 				}
 			],
 			"language" : "C",

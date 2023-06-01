@@ -8,6 +8,9 @@ int main() {
     account_list_t account_list = init();
     int type = 0;
     char *name = login_menu(account_list, &type);
+    if (name == NULL) {
+        return 0;
+    }
     printf("%s login successfully!\n", name);
     if (type) {
         admin_menu(account_list);

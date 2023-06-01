@@ -20,6 +20,14 @@ account_list_t init() {
     return account_list;
 }
 
+char *strdup(const char *s) {
+    size_t len = strlen(s) + 1;
+    void *new = malloc(len);
+    if (new == NULL)
+        return NULL;
+    return (char *)memcpy(new, s, len);
+}
+
 account_t new_account(char *name, char *pwd, int type) {
     account_t new_account = (account_t)malloc(sizeof(struct account));
     /* Failed to allocate memory */
@@ -109,6 +117,7 @@ int edit_account(account_list_t account_list, char *name, int type,
         }
         account_list = account_list->next;
     }
+    return 0;
 }
 
 void print_all_accounts(account_list_t list) {

@@ -14,6 +14,9 @@ char *login_menu(account_list_t account_list, int *type) {
         printf("*****************************************************\n");
         printf("Enter your option -> ");
         scanf("%d", &opt);
+        if (!opt) {
+            return NULL;
+        }
         printf("Username -> ");
         char *username = (char *)calloc(MAX_STRING_LENGTH, sizeof(char));
         scanf("%s", username);
@@ -29,6 +32,7 @@ char *login_menu(account_list_t account_list, int *type) {
             return verify_account(account_list, username, password, opt - 1);
         }
     } while (opt);
+    return NULL;
 }
 
 void admin_menu(account_list_t account_list) {
