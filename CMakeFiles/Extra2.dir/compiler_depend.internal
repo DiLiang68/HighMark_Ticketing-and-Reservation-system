@@ -15,15 +15,12 @@ CMakeFiles/Extra2.dir/src/login/login.c.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h
  C:/MinGW/include/stdlib.h
  C:/MinGW/include/errno.h
- C:/MinGW/include/alloca.h
  C:/MinGW/include/string.h
- C:/MinGW/include/strings.h
- C:/MinGW/include/wchar.h
 
 CMakeFiles/Extra2.dir/src/main.c.obj
  G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/main.c
  G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/menu/menu.h
- G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/login/login.h
+ G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/appointment/appointment.h
  C:/MinGW/include/stdio.h
  C:/MinGW/include/_mingw.h
  C:/MinGW/include/msvcrtver.h
@@ -35,10 +32,10 @@ CMakeFiles/Extra2.dir/src/main.c.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h
  C:/MinGW/include/stdlib.h
  C:/MinGW/include/errno.h
- C:/MinGW/include/alloca.h
  C:/MinGW/include/string.h
- C:/MinGW/include/strings.h
- C:/MinGW/include/wchar.h
+ C:/MinGW/include/time.h
+ C:/MinGW/include/sys/types.h
+ G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/src/login/login.h
  C:/MinGW/include/math.h
 
 CMakeFiles/Extra2.dir/src/menu/menu.c.obj

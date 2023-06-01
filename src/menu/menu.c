@@ -29,7 +29,10 @@ char *login_menu(account_list_t account_list, int *type) {
         getchar();
 
         if (verify_account(account_list, username, password, opt - 1)) {
+            *type = opt - 1;
             return verify_account(account_list, username, password, opt - 1);
+        } else {
+            printf("Incorrect account information!\n");
         }
     } while (opt);
     return NULL;
@@ -80,6 +83,8 @@ void admin_menu(account_list_t account_list) {
                                    new_account(username, password, type));
             if (!succ) {
                 printf("Failed to add the account!\n");
+            } else {
+                printf("Account created successfully\n");
             }
             break;
         }
@@ -103,6 +108,8 @@ void admin_menu(account_list_t account_list) {
             int succ = delete_account(&account_list, username, type);
             if (!succ) {
                 printf("Failed to delete the account!\n");
+            } else {
+                printf("Account deleted successfully!\n");
             }
             break;
         }
@@ -239,7 +246,7 @@ void book_menu(char *name, appointment_node_t *head) {
         if (hour < 10 || hour > 15 ||
             search_appointment_by_date(*head, hour, day, month, year, opt) !=
                 NULL) {
-            printf("The hour you selected is invalid!\n");
+            printf("The time you selected is invalid!\n");
             return;
         }
         int succ = make_appointment(head, opt, hour, day, month, year, name);
@@ -292,8 +299,8 @@ void manage_menu(char *name, appointment_node_t *head) {
             }
             Appointment_t appointment =
                 search_appointment_by_date(*head, hour, day, month, year, type);
-            if (strcmp(appointment->name, name) != 0) {
-                printf("This appointment is not for you!\n");
+            if (!appointment || strcmp(appointment->name, name) != 0) {
+                printf("The appointment is incorrect!\n");
                 return;
             }
             int succ =

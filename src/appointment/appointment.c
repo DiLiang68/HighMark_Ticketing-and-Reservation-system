@@ -100,10 +100,13 @@ int make_appointment(appointment_node_t *head, int type, int hour, int day,
 
 void print_appointments_by_name(appointment_node_t head, char *name) {
     int ok = 0;
+    char *str[5] = {"Admissions", "Student ID card",
+                    "Enrolment and course advice", "Travel concession",
+                    "Results & Graduation "};
     while (head != NULL) {
         if (strcmp(head->data->name, name) == 0) {
             printf("Appointment: %s\n", head->data->name);
-            printf("Type: %d\n", head->data->type);
+            printf("Type: %s\n", str[head->data->type]);
             printf("Hour: %d\n", head->data->hour);
             printf("Day: %d\n", head->data->day);
             printf("Month: %d\n", head->data->month);

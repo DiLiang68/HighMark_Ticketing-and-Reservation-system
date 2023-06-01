@@ -129,7 +129,7 @@ void print_all_accounts(account_list_t list) {
         printf(" Account %d:\n", index);
         printf(" Name: %s\n", current->account->name);
         printf(" Password: %s\n", current->account->pwd);
-        printf(" Type: %d\n", current->account->type);
+        printf(" Type: %s\n", current->account->type ? "Admin" : "User");
         current = current->next;
         index++;
     }
