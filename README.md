@@ -27,7 +27,7 @@ After downloading the source code, use the `make` command for compilation, and t
 
 ## System Design and Implementation
 
-The system uses a linked list data structure to store appointment information and implements functionalities for creating, querying, and deleting appointments.
+The system uses a linked list data structure to store both appointment and account information and implements functionalities for creating, querying, and deleting appointments.
 
 ### Architecture Design
 
