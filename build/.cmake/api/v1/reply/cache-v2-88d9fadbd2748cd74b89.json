@@ -923,7 +923,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Extra2"
+			"value" : "main"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1648,6 +1648,42 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
+		},
+		{
+			"name" : "main_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/build"
+		},
+		{
+			"name" : "main_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "main_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system"
 		}
 	],
 	"kind" : "cache",

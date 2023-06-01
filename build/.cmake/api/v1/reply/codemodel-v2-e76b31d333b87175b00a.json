@@ -55,7 +55,7 @@
 					[
 						0
 					],
-					"name" : "Extra2",
+					"name" : "main",
 					"targetIndexes" : 
 					[
 						0,
@@ -220,13 +220,6 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "Extra2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Extra2-Debug-b13f0629ffd0375f9b92.json",
-					"name" : "Extra2",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "Nightly::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Nightly-Debug-a6f81f40c35e154d9dfd.json",
 					"name" : "Nightly",
@@ -293,6 +286,13 @@
 					"id" : "NightlyUpdate::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-NightlyUpdate-Debug-3c6b426617ec4c705fd5.json",
 					"name" : "NightlyUpdate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-cbd5e7fd18e1f0ed328b.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

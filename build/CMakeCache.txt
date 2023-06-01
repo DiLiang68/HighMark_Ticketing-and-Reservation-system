@@ -159,7 +159,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Extra2
+CMAKE_PROJECT_NAME:STATIC=main
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -295,6 +295,15 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Name of the computer/site where compile is being run
 SITE:STRING=LAPTOP-9ACM8LET
+
+//Value Computed by CMake
+main_BINARY_DIR:STATIC=G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system/build
+
+//Value Computed by CMake
+main_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+main_SOURCE_DIR:STATIC=G:/FCP/Extra2/HighMark_Ticketing-and-Reservation-system
 
 
 ########################

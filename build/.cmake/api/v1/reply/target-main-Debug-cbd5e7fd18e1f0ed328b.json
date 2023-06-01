@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Extra2.exe"
+			"path" : "main.exe"
 		},
 		{
-			"path" : "Extra2.pdb"
+			"path" : "main.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -70,7 +70,7 @@
 			]
 		}
 	],
-	"id" : "Extra2::@6890427a1f51a3e7e1df",
+	"id" : "main::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -90,8 +90,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "Extra2",
-	"nameOnDisk" : "Extra2.exe",
+	"name" : "main",
+	"nameOnDisk" : "main.exe",
 	"paths" : 
 	{
 		"build" : ".",

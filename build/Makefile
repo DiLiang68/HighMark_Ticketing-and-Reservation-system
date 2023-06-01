@@ -490,24 +490,24 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
-# Target rules for targets named Extra2
+# Target rules for targets named main
 
 # Build rule for target.
-Extra2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Extra2
-.PHONY : Extra2
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-Extra2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/build
-.PHONY : Extra2/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 src/appointment/appointment.obj: src/appointment/appointment.c.obj
 .PHONY : src/appointment/appointment.obj
 
 # target to build an object file
 src/appointment/appointment.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/appointment/appointment.c.obj
 .PHONY : src/appointment/appointment.c.obj
 
 src/appointment/appointment.i: src/appointment/appointment.c.i
@@ -515,7 +515,7 @@ src/appointment/appointment.i: src/appointment/appointment.c.i
 
 # target to preprocess a source file
 src/appointment/appointment.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/appointment/appointment.c.i
 .PHONY : src/appointment/appointment.c.i
 
 src/appointment/appointment.s: src/appointment/appointment.c.s
@@ -523,7 +523,7 @@ src/appointment/appointment.s: src/appointment/appointment.c.s
 
 # target to generate assembly for a file
 src/appointment/appointment.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/appointment/appointment.c.s
 .PHONY : src/appointment/appointment.c.s
 
 src/login/login.obj: src/login/login.c.obj
@@ -531,7 +531,7 @@ src/login/login.obj: src/login/login.c.obj
 
 # target to build an object file
 src/login/login.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/login/login.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/login/login.c.obj
 .PHONY : src/login/login.c.obj
 
 src/login/login.i: src/login/login.c.i
@@ -539,7 +539,7 @@ src/login/login.i: src/login/login.c.i
 
 # target to preprocess a source file
 src/login/login.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/login/login.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/login/login.c.i
 .PHONY : src/login/login.c.i
 
 src/login/login.s: src/login/login.c.s
@@ -547,7 +547,7 @@ src/login/login.s: src/login/login.c.s
 
 # target to generate assembly for a file
 src/login/login.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/login/login.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/login/login.c.s
 .PHONY : src/login/login.c.s
 
 src/main.obj: src/main.c.obj
@@ -555,7 +555,7 @@ src/main.obj: src/main.c.obj
 
 # target to build an object file
 src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.c.obj
 .PHONY : src/main.c.obj
 
 src/main.i: src/main.c.i
@@ -563,7 +563,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -571,7 +571,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 src/menu/menu.obj: src/menu/menu.c.obj
@@ -579,7 +579,7 @@ src/menu/menu.obj: src/menu/menu.c.obj
 
 # target to build an object file
 src/menu/menu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/menu/menu.c.obj
 .PHONY : src/menu/menu.c.obj
 
 src/menu/menu.i: src/menu/menu.c.i
@@ -587,7 +587,7 @@ src/menu/menu.i: src/menu/menu.c.i
 
 # target to preprocess a source file
 src/menu/menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/menu/menu.c.i
 .PHONY : src/menu/menu.c.i
 
 src/menu/menu.s: src/menu/menu.c.s
@@ -595,7 +595,7 @@ src/menu/menu.s: src/menu/menu.c.s
 
 # target to generate assembly for a file
 src/menu/menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/menu/menu.c.s
 .PHONY : src/menu/menu.c.s
 
 # Help Target
@@ -635,7 +635,7 @@ help:
 	@echo ... NightlySubmit
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
-	@echo ... Extra2
+	@echo ... main
 	@echo ... src/appointment/appointment.obj
 	@echo ... src/appointment/appointment.i
 	@echo ... src/appointment/appointment.s
