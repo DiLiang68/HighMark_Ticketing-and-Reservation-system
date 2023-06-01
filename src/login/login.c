@@ -1,23 +1,21 @@
 #include "login.h"
 
 account_list_t init() {
-    account_list_t account_list =
-        (account_list_t)malloc(sizeof(struct account_list));
-    /* Failed to allocate memory */
-    if (account_list == NULL) {
-        printf("Failed to allocate memory!");
-        return NULL;
-    }
-    account_list->account = NULL; /* initialize the account field to NULL */
-    account_list->next = NULL;    /* initialize the next field to NULL */
+    account_list_t account_list = NULL;
 
-    /* Define two accounts */
     account_t account1 = new_account("Alice", "0", 0); /* a normal user */
     account_t account2 = new_account("Bob", "1", 1);   /* an admin user */
 
-    /* Add them to the account account_list */
-    add_account(&account_list, account1);
-    add_account(&account_list, account2);
+    /* Add them to the account list */
+    if (!add_account(&account_list, account1)) {
+        free(account1);
+        return NULL;
+    }
+    if (!add_account(&account_list, account2)) {
+        free(account2);
+        free_account_list(account_list);
+        return NULL;
+    }
 
     return account_list;
 }
@@ -26,7 +24,7 @@ account_t new_account(char *name, char *pwd, int type) {
     account_t new_account = (account_t)malloc(sizeof(struct account));
     /* Failed to allocate memory */
     if (new_account == NULL) {
-        printf("Failed to allocate memory!");
+        printf("Failed to allocate memory!\n");
         return NULL;
     }
     new_account->name = strdup(name);
@@ -47,18 +45,20 @@ int add_account(account_list_t *account_list, account_t account) {
     return 0;
 }
 
-int verify_account(account_list_t account_list, char *name, char *pwd,
-                   int type) {
+char *verify_account(account_list_t account_list, char *name, char *pwd,
+                     int type) {
     account_list_t current = account_list;
     while (current != NULL) {
-        if (strcmp(current->account->name, name) == 0 &&
-            strcmp(current->account->pwd, pwd) == 0 &&
-            current->account->type == type) {
-            return 1;
+        if (current->account != NULL) {
+            if (strcmp(current->account->name, name) == 0 &&
+                strcmp(current->account->pwd, pwd) == 0 &&
+                current->account->type == type) {
+                return current->account->name;
+            }
         }
         current = current->next;
     }
-    return 0;
+    return NULL;
 }
 
 int check_account(account_list_t account_list, char *name, int type) {
@@ -109,6 +109,22 @@ int edit_account(account_list_t account_list, char *name, int type,
         }
         account_list = account_list->next;
     }
+}
+
+void print_all_accounts(account_list_t list) {
+    account_list_t current = list;
+    int index = 1;
+    printf("Printing all account information:\n");
+    while (current != NULL) {
+        printf("\n");
+        printf(" Account %d:\n", index);
+        printf(" Name: %s\n", current->account->name);
+        printf(" Password: %s\n", current->account->pwd);
+        printf(" Type: %d\n", current->account->type);
+        current = current->next;
+        index++;
+    }
+    printf("\n");
 }
 
 void free_account_list(account_list_t account_list) {

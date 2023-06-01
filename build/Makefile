@@ -502,6 +502,30 @@ Extra2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/build
 .PHONY : Extra2/fast
 
+src/appointment/appointment.obj: src/appointment/appointment.c.obj
+.PHONY : src/appointment/appointment.obj
+
+# target to build an object file
+src/appointment/appointment.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.obj
+.PHONY : src/appointment/appointment.c.obj
+
+src/appointment/appointment.i: src/appointment/appointment.c.i
+.PHONY : src/appointment/appointment.i
+
+# target to preprocess a source file
+src/appointment/appointment.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.i
+.PHONY : src/appointment/appointment.c.i
+
+src/appointment/appointment.s: src/appointment/appointment.c.s
+.PHONY : src/appointment/appointment.s
+
+# target to generate assembly for a file
+src/appointment/appointment.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/appointment/appointment.c.s
+.PHONY : src/appointment/appointment.c.s
+
 src/login/login.obj: src/login/login.c.obj
 .PHONY : src/login/login.obj
 
@@ -550,6 +574,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/menu/menu.obj: src/menu/menu.c.obj
+.PHONY : src/menu/menu.obj
+
+# target to build an object file
+src/menu/menu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.obj
+.PHONY : src/menu/menu.c.obj
+
+src/menu/menu.i: src/menu/menu.c.i
+.PHONY : src/menu/menu.i
+
+# target to preprocess a source file
+src/menu/menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.i
+.PHONY : src/menu/menu.c.i
+
+src/menu/menu.s: src/menu/menu.c.s
+.PHONY : src/menu/menu.s
+
+# target to generate assembly for a file
+src/menu/menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.s
+.PHONY : src/menu/menu.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -588,12 +636,18 @@ help:
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
 	@echo ... Extra2
+	@echo ... src/appointment/appointment.obj
+	@echo ... src/appointment/appointment.i
+	@echo ... src/appointment/appointment.s
 	@echo ... src/login/login.obj
 	@echo ... src/login/login.i
 	@echo ... src/login/login.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/menu/menu.obj
+	@echo ... src/menu/menu.i
+	@echo ... src/menu/menu.s
 .PHONY : help
 
 

@@ -550,6 +550,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/menu/menu.obj: src/menu/menu.c.obj
+.PHONY : src/menu/menu.obj
+
+# target to build an object file
+src/menu/menu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.obj
+.PHONY : src/menu/menu.c.obj
+
+src/menu/menu.i: src/menu/menu.c.i
+.PHONY : src/menu/menu.i
+
+# target to preprocess a source file
+src/menu/menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.i
+.PHONY : src/menu/menu.c.i
+
+src/menu/menu.s: src/menu/menu.c.s
+.PHONY : src/menu/menu.s
+
+# target to generate assembly for a file
+src/menu/menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Extra2.dir\build.make CMakeFiles/Extra2.dir/src/menu/menu.c.s
+.PHONY : src/menu/menu.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -594,6 +618,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/menu/menu.obj
+	@echo ... src/menu/menu.i
+	@echo ... src/menu/menu.s
 .PHONY : help
 
 

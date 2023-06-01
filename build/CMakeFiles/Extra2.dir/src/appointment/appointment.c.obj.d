@@ -1,7 +1,6 @@
-CMakeFiles/Extra2.dir/src/main.c.obj: \
- G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\main.c \
- G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\menu/menu.h \
- g:\fcp\extra2\highmark_ticketing-and-reservation-system\src\login\login.h \
+CMakeFiles/Extra2.dir/src/appointment/appointment.c.obj: \
+ G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\appointment\appointment.c \
+ G:\FCP\Extra2\HighMark_Ticketing-and-Reservation-system\src\appointment\appointment.h \
  c:\mingw\include\stdio.h c:\mingw\include\_mingw.h \
  c:\mingw\include\msvcrtver.h c:\mingw\include\w32api.h \
  c:\mingw\include\sdkddkver.h c:\mingw\include\features.h \
@@ -11,4 +10,4 @@ CMakeFiles/Extra2.dir/src/main.c.obj: \
  c:\mingw\include\stdlib.h c:\mingw\include\errno.h \
  c:\mingw\include\alloca.h c:\mingw\include\string.h \
  c:\mingw\include\strings.h c:\mingw\include\wchar.h \
- c:\mingw\include\math.h
+ c:\mingw\include\time.h c:\mingw\include\sys\types.h

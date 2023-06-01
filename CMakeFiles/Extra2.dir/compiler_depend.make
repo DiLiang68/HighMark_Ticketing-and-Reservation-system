@@ -3,40 +3,60 @@
 
 CMakeFiles/Extra2.dir/src/login/login.c.obj: src/login/login.c \
   src/login/login.h \
-  C:/MinGW/include/stdlib.h \
+  C:/MinGW/include/stdio.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/msvcrtver.h \
   C:/MinGW/include/w32api.h \
   C:/MinGW/include/sdkddkver.h \
   C:/MinGW/include/features.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
-  C:/MinGW/include/errno.h \
-  C:/MinGW/include/alloca.h \
-  C:/MinGW/include/stdio.h \
   C:/MinGW/include/sys/types.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h \
+  C:/MinGW/include/stdlib.h \
+  C:/MinGW/include/errno.h \
+  C:/MinGW/include/alloca.h \
   C:/MinGW/include/string.h \
   C:/MinGW/include/strings.h \
   C:/MinGW/include/wchar.h
 
 CMakeFiles/Extra2.dir/src/main.c.obj: src/main.c \
+  src/menu/menu.h \
   src/login/login.h \
-  C:/MinGW/include/stdlib.h \
+  C:/MinGW/include/stdio.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/msvcrtver.h \
   C:/MinGW/include/w32api.h \
   C:/MinGW/include/sdkddkver.h \
   C:/MinGW/include/features.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
-  C:/MinGW/include/errno.h \
-  C:/MinGW/include/alloca.h \
-  C:/MinGW/include/stdio.h \
   C:/MinGW/include/sys/types.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h \
+  C:/MinGW/include/stdlib.h \
+  C:/MinGW/include/errno.h \
+  C:/MinGW/include/alloca.h \
   C:/MinGW/include/string.h \
   C:/MinGW/include/strings.h \
   C:/MinGW/include/wchar.h \
   C:/MinGW/include/math.h
+
+CMakeFiles/Extra2.dir/src/menu/menu.c.obj: src/menu/menu.c \
+  src/menu/menu.h \
+  src/login/login.h \
+  C:/MinGW/include/stdio.h \
+  C:/MinGW/include/_mingw.h \
+  C:/MinGW/include/msvcrtver.h \
+  C:/MinGW/include/w32api.h \
+  C:/MinGW/include/sdkddkver.h \
+  C:/MinGW/include/features.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h \
+  C:/MinGW/include/stdlib.h \
+  C:/MinGW/include/errno.h \
+  C:/MinGW/include/alloca.h \
+  C:/MinGW/include/string.h \
+  C:/MinGW/include/strings.h \
+  C:/MinGW/include/wchar.h
 
 
 src/login/login.c:
@@ -47,9 +67,9 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h:
 
 src/login/login.h:
 
-C:/MinGW/include/w32api.h:
+C:/MinGW/include/features.h:
 
-C:/MinGW/include/stdlib.h:
+C:/MinGW/include/stdio.h:
 
 C:/MinGW/include/_mingw.h:
 
@@ -57,17 +77,17 @@ C:/MinGW/include/sdkddkver.h:
 
 C:/MinGW/include/msvcrtver.h:
 
-C:/MinGW/include/features.h:
-
-C:/MinGW/include/errno.h:
-
-C:/MinGW/include/alloca.h:
-
-C:/MinGW/include/stdio.h:
+C:/MinGW/include/w32api.h:
 
 C:/MinGW/include/sys/types.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h:
+
+C:/MinGW/include/stdlib.h:
+
+C:/MinGW/include/errno.h:
+
+C:/MinGW/include/alloca.h:
 
 C:/MinGW/include/string.h:
 
@@ -76,3 +96,7 @@ C:/MinGW/include/strings.h:
 C:/MinGW/include/wchar.h:
 
 src/main.c:
+
+src/menu/menu.h:
+
+src/menu/menu.c:

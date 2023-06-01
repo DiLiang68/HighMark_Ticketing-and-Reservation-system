@@ -46,7 +46,7 @@ account_t new_account(char *name, char *pwd, int type);
  *
  * @param account_list A pointer to the list of accounts.
  * @param account The account to be added.
- * 
+ *
  * @return int 1 if the account is added successfully, 0 otherwise.
  */
 int add_account(account_list_t *account_list, account_t account);
@@ -58,18 +58,18 @@ int add_account(account_list_t *account_list, account_t account);
  * @param name The name of the account.
  * @param pwd The password of the account.
  * @param type The type of the account.
- * 
- * @return int 1 if the account is in the list, 0 otherwise.
+ *
+ * @return int The name of the account.
  */
-int verify_account(account_list_t account_list, char *name, char *pwd,
-                   int type);
+char *verify_account(account_list_t account_list, char *name, char *pwd,
+                     int type);
 
 /**
  * @brief Check if an account exists in the account list.
  *
  * @param list The pointer to the account list.
  * @param name The name of the account to be checked.
- * 
+ *
  * @return int 1 if the account exists, 0 otherwise.
  */
 int check_account(account_list_t account_list, char *name, int type);
@@ -96,6 +96,13 @@ int delete_account(account_list_t *account_list, char *name, int type);
  */
 int edit_account(account_list_t account_list, char *name, int type,
                  char *new_name, char *new_pwd, int new_type);
+
+/**
+ * @brief Traverse the list and print the account information in each node.
+ *
+ * @param list a pointer to the head node of the list
+ */
+void print_all_accounts(account_list_t list);
 
 /**
  * @brief Free the memory allocated for the account list.
