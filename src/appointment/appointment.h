@@ -99,11 +99,12 @@ void delete_appointment(appointment_node_t *head);
  * @param day Day of the appointment to search for.
  * @param month Month of the appointment to search for.
  * @param year Year of the appointment to search for.
+ * @param type Type of the appointment to search for.
  *
  * @return Returns a pointer to the appointment if found, NULL otherwise.
  */
 Appointment_t search_appointment_by_date(appointment_node_t head, int hour,
-                                         int day, int month, int year);
+                                         int day, int month, int year, int type);
 
 /**
  * @brief Makes a new appointment and adds it to the linked list.
@@ -139,10 +140,11 @@ void print_appointments_by_name(appointment_node_t head, char *name);
  * @param day Day of the appointment to delete.
  * @param month Month of the appointment to delete.
  * @param year Year of the appointment to delete.
+ * @param type Type of the appointment to delete.
  *
  * @return Returns 1 if the appointment is found and deleted, 0 otherwise.
  */
 int delete_appointment_by_date(appointment_node_t *head, int hour, int day,
-                               int month, int year);
+                               int month, int year, int type);
 
 #endif

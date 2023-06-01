@@ -225,8 +225,8 @@ void book_menu(char *name, appointment_node_t *head) {
         int i;
         for (i = 0; i < 6; i++) {
             printf(" %d:00 ", i + 10);
-            if (search_appointment_by_date(*head, i + 10, day, month, year) !=
-                NULL) {
+            if (search_appointment_by_date(*head, i + 10, day, month, year,
+                                           opt) != NULL) {
                 printf("UNAVAILABLE");
             } else {
                 printf("AVAILABLE");
@@ -237,7 +237,8 @@ void book_menu(char *name, appointment_node_t *head) {
         int hour;
         scanf("%d", &hour);
         if (hour < 10 || hour > 15 ||
-            search_appointment_by_date(*head, hour, day, month, year) != NULL) {
+            search_appointment_by_date(*head, hour, day, month, year, opt) !=
+                NULL) {
             printf("The hour you selected is invalid!\n");
             return;
         }
@@ -282,17 +283,21 @@ void manage_menu(char *name, appointment_node_t *head) {
             printf("year -> ");
             int year;
             scanf("%d", &year);
+            printf("type -> ");
+            int type;
+            scanf("%d", &type);
             if (!is_valid_date(day, month, year) || hour < 10 || hour > 16) {
                 printf("The hour you selected is invalid!\n");
                 return;
             }
             Appointment_t appointment =
-                search_appointment_by_date(*head, hour, day, month, year);
+                search_appointment_by_date(*head, hour, day, month, year, type);
             if (strcmp(appointment->name, name) != 0) {
                 printf("This appointment is not for you!\n");
                 return;
             }
-            int succ = delete_appointment_by_date(head, hour, day, month, year);
+            int succ =
+                delete_appointment_by_date(head, hour, day, month, year, type);
             if (succ) {
                 printf("Cancel appointment successfully!\n");
             } else {

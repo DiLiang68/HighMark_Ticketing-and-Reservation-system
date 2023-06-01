@@ -74,7 +74,8 @@ void delete_appointment(appointment_node_t *head) {
 }
 
 Appointment_t search_appointment_by_date(appointment_node_t head, int hour,
-                                         int day, int month, int year) {
+                                         int day, int month, int year,
+                                         int type) {
     while (head != NULL) {
 
         if (head->data->hour == hour && head->data->day == day &&
@@ -117,11 +118,12 @@ void print_appointments_by_name(appointment_node_t head, char *name) {
 }
 
 int delete_appointment_by_date(appointment_node_t *head, int hour, int day,
-                               int month, int year) {
+                               int month, int year, int type) {
     appointment_node_t temp = *head, prev;
 
     if (temp != NULL && temp->data->hour == hour && temp->data->day == day &&
-        temp->data->month == month && temp->data->year == year) {
+        temp->data->month == month && temp->data->year == year &&
+        temp->data->type == type) {
         *head = temp->next;
         free(temp->data);
         free(temp);
